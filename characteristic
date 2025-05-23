@@ -1,0 +1,34 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+	Content="width=device-width, initial-scale=1.0">
+	body {
+	text-align: center;
+  margin: 0;
+  font-family: Arial;
+  background-color: #fffff;
+	}
+		<title>Characteristic</title>
+	</head>
+
+	<body>
+		<h1>關於Robear</h1>
+
+		<h4>外型特色</h4>
+		<p>身高150公分，擁有可愛小熊臉和白色身體的，在雙手手臂還有柔軟的靠枕，最大的特色可以公主抱，可以承載最大重量80公斤</p>
+		<>
+		<h4>主要功能</h4>
+		<ol type="1" start="1">
+			<li>居家照護</li>
+			<li>陪伴老人</li>
+			<li>協助看護人</li>
+
+	</body>
+	
+
+
+
+
+</html>
