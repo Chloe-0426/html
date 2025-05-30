@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robear web index</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+      margin: 0;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #f1c40f;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+	  gap: 20px;
+    }
+
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .left img {
+      width: 100%;
+	  max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .right {
+      flex: 1;
+      text-align: left;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+	.right h1 {
+	  font-size: 2.5em;
+	  margin-bottom: 10px;
+	  color: #333;
+	}
+
+    .right p {
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 1em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+	    font-family: 'Yu Gothic', 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+	}
+
+    .buttons a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .resume {
+      background-color: #f7cac9;
+    }
+
+    .projects {
+      background-color: #92a8d1;
+    }
+
+    .contact {
+      background-color: #b44a63;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+         width: 100%;
+		 text-align: center;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+	main {
+	  background-color: white;
+	  border-radius: 20px;
+	  padding: 20px;
+	  margin: 30px auto;
+	  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	  width: 90%;
+	  max-width: 1200px;
+	  height:auto;
+	}
+
+	footer {
+	  background: transparent;
+	  padding: 50px 20px;
+	  color: #333;
+	}
+
+	.footer-wrapper {
+	  background: rgba(255, 255, 255, 0.95);
+	  border-radius: 20px;
+	  padding: 30px;
+	  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	  max-width: 1000px;
+	  margin: 40px auto 0;
+	}
+
+	.footer-container {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  gap: 30px;
+	}
+
+	.footer-section {
+	  flex: 1;
+	  min-width: 220px;
+	}
+
+	.footer-section h2 {
+	  margin-top: 0;
+	  color: #b44a63; /* 主頁配色一致 */
+	  font-size: 1.5em;
+	}
+
+	.footer-section a {
+	  color: #f7cac9;
+	  text-decoration: underline;
+	}
+
+	.footer-icons span {
+	  display: inline-block;
+	  margin-top: 5px;
+	  font-weight: bold;
+	  color: #666;
+	}
+
+	.footer-bottom {
+	  text-align: center;
+	  margin-top: 20px;
+	  font-size: 13px;
+	  color: #555;
+	}
+
+	.footer-bottom a {
+	  color: #333;
+	  text-decoration: underline;
+	}
+
+	.marquee {
+	  overflow: hidden;
+	  white-space: nowrap;
+	  box-sizing: border-box;
+	  margin-bottom: 30px;
+	}
+
+	.marquee p {
+	  display: inline-block;
+	  padding-left: 100%;
+	  animation: marquee 15s linear infinite;
+	  color: #666;
+	  font-size: 1em;
+	}
+
+	@keyframes marquee {
+	  0%   { transform: translateX(0); }
+	  100% { transform: translateX(-100%); }
+	}
+
+  </style>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+</head>
+<body id="top">
+  <header>
+    <h1>Robear <span style="color: #f1c40f;">主頁</span></h1>
+    <nav>
+      <a href="history.html">歷史</a>
+	  <a href="characteristic.html">介紹</a>
+      <a href="about.html">關於</a>
+    </nav>
+  </header>
+
+	<main>
+		<div class="marquee">
+			<p>歡迎來到我們的網頁~</p>
+		</div>
+		<div class="container">
+		<div class="left">
+		  <img src="img/1.jpg" alt="Robear Image">
+		</div>
+		<div class="right">
+		  <h1>Hello!</h1>
+		  <p>我們的網頁是使用Robear為主題，下面是我們製作的介紹網頁。</p>
+		  <div class="buttons">
+			<a href="history.html" class="resume">歷史</a>
+			<a href="characteristic.html" class="projects">Robear介紹</a>
+			<a href="about.html" class="contact">關於</a>
+		  </div>
+		</div>
+		</div>
+	</main>
+
+  	  <!-- 頁尾 -->
+	<style>
+	   	.footer-wrapper {
+  		  background-color: #f9f9f9;
+		  padding: 40px 20px;
+    	  border-radius: 20px;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		}
+
+		/* 標題獨立樣式 */
+		.footer-wrapper h2 {
+		  font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+		  font-size: 20px;
+		  color: #0f4368;
+		  margin-bottom: 20px;
+		}
+
+
+		/* 內容區塊：橫向排列 */
+		.footer-container {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: flex-start;
+		  flex-wrap: wrap;
+		}
+
+		/* 各個欄位 */
+		.footer-section {
+		  flex: 1;
+		  min-width: 200px;
+		  margin: 10px;
+		}
+
+		/* 內文統一排版 */
+		.footer-section p {
+  		  margin: 0 0 10px;
+  		  line-height: 1.6;
+		}
+
+		/* 連結樣式 */
+		.footer-section a {
+  		  color: #8eb8d6;
+  		  text-decoration: none;
+		}
+		.footer-section a:hover {
+  		  text-decoration: underline;
+		}
+
+		/* 社群圖示樣式 */
+		.social-icons a {
+		  font-size: 20px;
+		  margin-right: 10px;
+		  color: #8eb8d6;
+		}
+
+
+	</style>
+	  <footer>
+		<div class="footer-wrapper">
+			<h2>如有問題請聯絡我們</h2>
+		  <div class="footer-container">
+			<div class="footer-section">
+			  <p>E-mail<br>
+				<a href="mailto:lunasxling0@gmail.com">lunasxling0@gmail.com</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Phone<br>
+				 <a href="tel:0904857456">0904-857-456</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Follow Me</p>
+			  <p class="social-icons">
+			  <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+			  <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+			  <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			  </p>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="footer-bottom">
+			<p>&copy; 2025 6/3 第21組. All rights reserved.</p>
+		  </div>
+	  </footer>
+
+</body>
+</html>

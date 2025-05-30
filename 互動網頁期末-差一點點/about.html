@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+	  background: linear-gradient(180deg, #f7cac9, #92a8d1);
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+      margin: 0;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #e74c3c;
+    }
+
+    fieldset {
+	  background-color: rgba(255, 255, 255, 0.9);
+	  border: 2px solid #d48c9c;
+	  border-radius: 10px;
+	  padding: 20px;
+	  margin: 30px auto;
+	  width: 90%;
+	  max-width: 1000px; /* 放寬最大寬度 */
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	}
+
+
+    legend h2 {
+      color: #b44a63;
+      margin: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="range"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 8px;
+      margin: 6px 0 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #b44a63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #8d3b51;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #e89cae;
+      color: white;
+    }
+
+    img {
+      width: 80px;
+      border-radius: 40%;
+    }
+
+    @media (max-width: 600px) {
+      input[type="text"],
+      input[type="email"],
+      textarea,
+      select {
+        width: 100%;
+      }
+
+      table, thead, tbody, th, td, tr {
+        font-size: 14px;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+	/* footer 樣式 */
+    footer {
+      background: transparent;
+      padding: 50px 20px;
+      color: #333;
+    }
+
+    .footer-wrapper {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .footer-section h2 {
+      margin-top: 0;
+      color: #b44a63;
+      font-size: 1.5em;
+    }
+
+    .footer-section a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+    .footer-icons span {
+      display: inline-block;
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .footer-bottom a {
+      color: #333;
+      text-decoration: underline;
+    }
+
+
+
+ </style>
+
+	  <!-- FontAwesome 引用 -->
+	<link
+	 rel="stylesheet"
+	 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+	/>
+</head>
+<body id="top">
+	<!-- 頁首 -->
+	<header>
+    <h1>Robear <span style="color: #f1c40f;">關於</span></h1>
+		<nav>
+		  <a href="index.html">主頁</a>
+		  <a href="history.html">歷史</a>
+		  <a href="characteristic.html">關於</a>
+		</nav>
+	</header>
+
+	<!-- 關於我們 -->
+	<fieldset>
+    <legend><h2>關於我們</h2></legend>
+    <table>
+      <thead>
+        <tr>
+          <th>照片</th>
+          <th>學號</th>
+          <th>姓名</th>
+          <th>工作分配</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="img/2.png" alt="成員1"></td>
+          <td>CBF112051</td>
+          <td>曾怡婷</td>
+          <td>尋找模板、製作網頁</td>
+        </tr>
+        <tr>
+          <td><img src="img/3.png" alt="成員2"></td>
+          <td>CBF112052</td>
+          <td>蔡家筠</td>
+          <td>排版設計</td>
+        </tr>
+        <tr>
+          <td><img src="img/4.jpg" alt="成員3"></td>
+          <td>CBF112053</td>
+          <td>佘心伶</td>
+          <td>內容撰寫</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>資料來源</td>
+          <td colspan="3">
+            <a href="https://www.ilong-termcare.com/articles/Mj3" target="_blank">
+              給長者溫暖的「熊抱」！日本可愛照護機器人 Robear
+            </a>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+	</fieldset>
+
+	<!-- 意見表 -->
+	<form id="my">
+    <fieldset>
+      <legend><h2>意見表</h2></legend>
+
+      <p>姓&nbsp&nbsp&nbsp名：
+        <input type="text" name="demo-name">
+      </p>
+
+      <p>E-mail：
+        <input type="email" name="demo-email" placeholder="xxx@gmail.com">
+      </p>
+
+      <p>年齡：
+        <input type="radio" name="demo-age" value="age1"> 未滿20歲
+        <input type="radio" name="demo-age" value="age2" checked> 20~29
+        <input type="radio" name="demo-age" value="age3"> 30~39
+        <input type="radio" name="demo-age" value="age4"> 40歲以上
+      </p>
+
+      <p>網站使用滿意度：
+        <input type="range" name="satisfaction" min="1" max="10" step="1" value="5"
+               oninput="updateSatisfactionText(this.value)">
+        <span id="satisfaction-value">5</span> - <span id="satisfaction-text">普通 😐</span>
+      </p>
+
+      <p>意見回饋與建議：<br>
+        <textarea name="demo-message" placeholder="輸入需要改善的意見" rows="5"></textarea>
+      </p>
+
+      <input type="submit" value="提交">
+      <input type="reset" value="重設">
+    </fieldset>
+	</form>
+
+	<!-- JS 部分 -->
+	<script>
+    function updateSatisfactionText(value) {
+      document.getElementById('satisfaction-value').textContent = value;
+      const text = document.getElementById('satisfaction-text');
+
+      if (value <= 2) text.textContent = "非常不滿意 😠";
+      else if (value <= 4) text.textContent = "不滿意 🙁";
+      else if (value <= 6) text.textContent = "普通 😐";
+      else if (value <= 8) text.textContent = "滿意 🙂";
+      else text.textContent = "非常滿意 😄";
+    }
+
+    // 初始化文字顯示
+    document.addEventListener("DOMContentLoaded", function () {
+      const slider = document.querySelector('input[name="satisfaction"]');
+      updateSatisfactionText(slider.value);
+    });
+
+    // 送出確認
+    document.getElementById('my').addEventListener('submit', function(e) {
+  // 第一次確認
+  if (!confirm('確定要提交表單?')) {
+    e.preventDefault();
+    return;
+  }
+
+  // 取得意見內容
+  const message = this.elements['demo-message'].value;
+
+  // 第二次確認，顯示意見內容
+  const secondConfirm = confirm(`這是最後確認。\n您填寫的意見為：\n\n"${message}"\n\n是否確定送出？`);
+  if (!secondConfirm) {
+    e.preventDefault();
+  }
+});
+</script>
+
+	</script>
+
+	  <!-- 頁尾 -->
+     <style>
+	   	.footer-wrapper {
+  		  background-color: #f9f9f9;
+		    padding: 40px 20px;
+    	  border-radius: 20px;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		}
+
+		/* 標題獨立樣式 */
+		.footer-wrapper h2 {
+		  font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+		  font-size: 20px;
+		  color: #0f4368;
+		  margin-bottom: 20px;
+		}
+
+
+		/* 內容區塊：橫向排列 */
+		.footer-container {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: flex-start;
+		  flex-wrap: wrap;
+		}
+
+		/* 各個欄位 */
+		.footer-section {
+		  flex: 1;
+		  min-width: 200px;
+		  margin: 10px;
+		}
+
+		/* 內文統一排版 */
+		.footer-section p {
+  		  margin: 0 0 10px;
+  		  line-height: 1.6;
+		}
+
+		/* 連結樣式 */
+		.footer-section a {
+  		  color: #8eb8d6;
+  		  text-decoration: none;
+		}
+		.footer-section a:hover {
+  		  text-decoration: underline;
+		}
+
+		/* 社群圖示樣式 */
+		.social-icons a {
+		  font-size: 20px;
+		  margin-right: 10px;
+		  color: #8eb8d6;
+		}
+	</style>
+	  <footer>
+		<div class="footer-wrapper">
+      <h2>如有問題請聯絡我們</h2>
+		  <div class="footer-container">
+			<div class="footer-section">
+			  <p>E-mail<br>
+				<a href="mailto:lunasxling0@gmail.com">lunasxling0@gmail.com</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Phone<br>
+				 <a href="tel:0904857456">0904-857-456</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Follow Me</p>
+			  <p class="social-icons">
+			  <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+			  <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+			  <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			  </p>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="footer-bottom">
+			<p>&copy; 2025 6/3 第21組. All rights reserved.</p>
+		  </div>
+
+	  </footer>
+
+
+
+
+</body>
+</html>

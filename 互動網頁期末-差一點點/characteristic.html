@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Characteristic</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+	  background: linear-gradient(180deg, #f7cac9, #92a8d1);
+
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8em;
+      color: #333;
+      margin: 0;
+    }
+
+    header nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    header nav a {
+      color: #666;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: #f1c40f;
+    }
+
+    .img {
+	  display: block;
+	  margin: 20px auto;
+	  max-width: 100%;
+	  height: auto;
+	  border-radius: 20px;
+	  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	}
+
+
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .left, .right {
+        flex: unset;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+	main {
+	  background-color: white;
+	  border-radius: 20px;
+	  padding: 10px 20px;
+	  margin: 50px auto;
+	  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+	  width: 90%;
+	  max-width: 1200px;
+	}
+
+	footer {
+	  background: transparent;
+	  padding: 50px 20px;
+	  color: #333;
+	}
+
+	.footer-wrapper {
+	  background: rgba(255, 255, 255, 0.95);
+	  border-radius: 20px;
+	  padding: 30px;
+	  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+	  max-width: 1000px;
+	  margin: 40px auto 0;
+	}
+
+	.footer-container {
+	  display: flex;
+	  justify-content: space-between;
+	  flex-wrap: wrap;
+	  gap: 30px;
+	}
+
+	.footer-section {
+	  flex: 1;
+	  min-width: 220px;
+	}
+
+	.footer-section h2 {
+	  margin-top: 0;
+	  color: #f1c40f; /* 主頁配色一致 */
+	  font-size: 1.5em;
+	}
+
+	.footer-section a {
+	  color: #1abc9c;
+	  text-decoration: underline;
+	}
+
+	.footer-icons span {
+	  display: inline-block;
+	  margin-top: 5px;
+	  font-weight: bold;
+	  color: #666;
+	}
+
+	.footer-bottom {
+	  text-align: center;
+	  margin-top: 20px;
+	  font-size: 13px;
+	  color: #555;
+	}
+
+	.footer-bottom a {
+	  color: #333;
+	  text-decoration: underline;
+	}
+
+	.marquee {
+	  overflow: hidden;
+	  white-space: nowrap;
+	  box-sizing: border-box;
+	  margin-bottom: 30px;
+	}
+
+	.marquee p {
+	  display: inline-block;
+	  padding-left: 100%;
+	  animation: marquee 15s linear infinite;
+	  color: #666;
+	  font-size: 1em;
+	}
+
+	@keyframes marquee {
+	  0%   { transform: translateX(0); }
+	  100% { transform: translateX(-100%); }
+	}
+
+  </style>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+</head>
+<body id="top">
+  <header>
+    <h1>Robear <span style="color: #f1c40f;">介紹</span></h1>
+    <nav>
+      <a href="index.html">主頁</a>
+	  <a href="history.html">歷史</a>
+      <a href="about.html">關於</a>
+    </nav>
+  </header>
+
+	<main>
+		<article>
+		  <h1>關於Robear</h1>
+		  <p>Robear，「人」如其名，擁有可愛小熊臉和白色身體的它，可是肩負著照護工作的照護機器人。Robear未來將在日本的居家及照護機構，擔任陪伴老人和協助看護人員的重要角色。</p>
+		  <p>根據世界衛生組織(World Health Organization，WHO)報告指出，全球將在2050年擁有22%的人口超過60歲，人口老化是現在各國政府關注的議題，而日本人口老化的現象又比其他國家更為嚴重。</p>
+		  <p>日本厚生勞動省估計，2013年的照護職員大約有171萬人，到了2025年後，將會需要253萬的人力。
+		     社會對於照護的需求將越來越大，因此日本政府積極投入資金，開發多元的照護輔助裝置，以滿足照護的需要。而<strong>智慧型居家照護機器人，更是目前積極發展的項目。</strong>
+		  </p>
+		  <img src="img/5.jpg" class="img" alt="old Image">
+		  <p style="color:#006030; opacity: 0.5; text-align: center;">他們希望能運用科技來協助照護人員，減輕繁重的工作負擔、提升照護品質，也可以緩解照護人力不足的問題。</p>
+		  <p>這幾年來，日本開發機器人的技術不斷地精進，智慧型居家照護機器人的種類也愈來愈多元，還分為<strong>生活陪伴、家用服務、行動輔助載具、教育用、娛樂用等等。</strong></p>
+		  <br>
+			<section>
+			<h2 style="color: rgba(255, 0, 0, 0.5)">可愛機器人Robear的誕生</h2>
+			<p>研究機構理研 (Riken)在2011年時研發了一款名為「RIBA-II」的機器人，在2015年經過改良後，變成了高150公分，重約90公斤的照護機器人「Robear」。減輕重量後，讓Robear比起它的前身「RIBA-II」輕巧許多，而「瘦身後」的它，在支援照護者工作時，動作也變得更加順暢。</p>
+			<img src="img/2.jpg" class="img" alt="old Image">
+			<p>為了讓使用者舒適安心，Robear的表皮使用智慧橡膠感應器，柔軟的觸感類似人類的皮膚，還可以測量到壓力與形變，能快速感應到使用者身體的阻力；Robear的動作輕緩，讓被它「熊」抱的人感到安心。</p>
+			<p>Robear身上搭配六軸轉矩感測器、攝像機、麥克風，<strong>可承受80公斤的重量，將人從床上抬起，並移到輪椅上</strong>；還能夠幫助行動不便的人行走。它目前需透過平板電腦，或是手動操作來控制，充電一次可使用4小時。</p>
+			<img src="img/3.jpg" class="img" alt="old Image">
+			<p>理研 (Riken)希望這項技術，未來能夠實際應用在照護機器人上面，並表示若要近期商業化的話，設備將會簡化，考量成本價格將低於420 美元(約台幣14000元)。</p>
+			<p>試想，未來若有像Robear一樣的照護機器人能協助長者生活，對於因照護人力不足面臨的問題將有所緩解；<strong>溫暖又可愛的機器人，也能實際地減低長者與照護者的壓力，進一步提升雙方的生活品質。</strong></p>
+			<br>
+			<p>身處於老化的社會之中，智慧型機器人因應社會照護的需要，不斷地被研發和改良，雖然目前的長者，未能立刻擁有智慧照護機器人的陪伴，但說不定在未來，我們家家戶戶都將會有一個照護機器人呢。</p>
+			<p>而它發展出的耐力與細心，也許會讓我們漸漸地不只把它當成機器，而是當成「人」在思考了。</p>
+			<p style="color: red">▼這裡還有互動影片，看看Robear怎麼「熊抱」吧！<br>
+			<iframe width="642" height="391" src="https://www.youtube.com/embed/Bzrhc-GhPDs" title="介護支援ロボットROBEAR(ロベア)の機能紹介動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			</p>
+			</section>
+			<section>
+			<h2>Robear 的功能和特色:</h2>
+			<dl>
+				<dt><h3>外型特色</h3></dt>
+				<dd><ol type="1" start="1">
+						<li>身高150公分，擁有可愛小熊臉和白色身體的，在雙手手臂還有柔軟的靠枕，最大的特色可以公主抱，可以承載最大重量80公斤</li>
+						<li>Robear 的雙手耐重可達80公斤，可以應付大部分患者的體重</li>
+						<li>可以透過手動操作或使用Android平板電腦控制</li>
+					</ol>
+				</dd>
+
+				<dt><h3>主要功能</h3></dt>
+				<dd><ol type="1" start="1">
+						<li>居家照護</li>
+						<li>陪伴老人</li>
+						<li>協助看護人</li>
+					</ol>
+				</dd>
+			<dl>
+			</section>
+		</article>
+	</main>
+
+
+
+
+  	  <!-- 頁尾 -->
+	   <style>
+	   	.footer-wrapper {
+  		  background-color: #f9f9f9;
+		  padding: 40px 20px;
+    	  border-radius: 20px;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		}
+
+		/* 標題獨立樣式 */
+		.footer-wrapper h2 {
+		  font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+		  font-size: 20px;
+		  color: #0f4368;
+		  margin-bottom: 20px;
+		}
+
+
+		/* 內容區塊：橫向排列 */
+		.footer-container {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: flex-start;
+		  flex-wrap: wrap;
+		}
+
+		/* 各個欄位 */
+		.footer-section {
+		  flex: 1;
+		  min-width: 200px;
+		  margin: 10px;
+		}
+
+		/* 內文統一排版 */
+		.footer-section p {
+  		  margin: 0 0 10px;
+  		  line-height: 1.6;
+		}
+
+		/* 連結樣式 */
+		.footer-section a {
+  		  color: #8eb8d6;
+  		  text-decoration: none;
+		}
+		.footer-section a:hover {
+  		  text-decoration: underline;
+		}
+
+		/* 社群圖示樣式 */
+		.social-icons a {
+		  font-size: 20px;
+		  margin-right: 10px;
+		  color: #8eb8d6;
+		}
+	</style>
+	  <footer>
+		<div class="footer-wrapper">
+			<h2>如有問題請聯絡我們</h2>
+		  <div class="footer-container">
+			<div class="footer-section">
+			  <p>E-mail<br>
+				<a href="mailto:lunasxling0@gmail.com">lunasxling0@gmail.com</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Phone<br>
+				 <a href="tel:0904857456">0904-857-456</a></p>
+			</div>
+
+			<div class="footer-section">
+			  <p>Follow Me</p>
+			  <p class="social-icons">
+			  <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+			  <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+			  <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+			  <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			  </p>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="footer-bottom">
+			<p>&copy; 2025 6/3 第21組. All rights reserved.</p>
+		  </div>
+	  </footer>
+
+</body>
+</html>
+
+
+
+
+
+

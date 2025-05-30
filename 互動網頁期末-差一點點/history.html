@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>History</title>
+    <style>
+        /* 這裡放你的原本 CSS (省略重複部分，關鍵是背景、字體、header/footer) */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #f7cac9, #92a8d1);
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin: 0;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #666;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #e74c3c;
+        }
+
+        fieldset {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #d48c9c;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px auto;
+            width: 90%;
+            max-width: 1000px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        legend h2 {
+            color: #b44a63;
+            margin: 0;
+        }
+
+        /* ROBEAR 卡片樣式 */
+        .robo-container {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .robo-card {
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .robo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 填滿卡片且不變形 */
+            display: block;
+        }
+
+        .robo-card:hover::after {
+            content: attr(data-name);
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .robo-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* 半透明黑底 */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .robo-card:hover .overlay {
+            opacity: 1;
+        }
+
+
+        .robo-details {
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            padding: 15px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            min-height: 100px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* 你的 footer 樣式略 */
+        footer {
+            background: transparent;
+            padding: 50px 20px;
+            color: #333;
+        }
+
+        .footer-wrapper {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 40px auto 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .footer-section h2 {
+            margin-top: 0;
+            color: #b44a63;
+            font-size: 1.5em;
+        }
+
+        .footer-section a {
+            color: #333;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .footer-bottom a {
+            color: #333;
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- FontAwesome 引用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body id="history.html">
+
+    <!-- 頁首 -->
+    <header>
+        <h1>Robear <span style="color: #f1c40f;">歷史</span></h1>
+        <nav>
+            <a href="index.html">主頁</a>
+            <a href="contect.html">關於</a>
+            <a href="characteristic.html">介紹</a>
+        </nav>
+    </header>
+
+
+    <!-- ROBEAR 機器人卡片 -->
+
+    <fieldset>
+
+        <div class="robo-container">
+            <div class="robo-card" data-detail="RI-MAN是第一代機器人，專注於基礎護理與搬運功能。">
+                <img src="img/RI-MAN.jpg" alt="RI-MAN">
+                <div class="overlay">RI-MAN</div>
+            </div>
+            <div class="robo-card" data-detail="RIBA改進了抓取精度與行動速度，增加了更多感測器。">
+                <img src="img/RIBA.jpg" alt="RIBA">
+                <div class="overlay">RIBA</div>
+            </div>
+            <div class="robo-card" data-detail="RIBA-II採用了更靈活的機械手臂，提升了護理範圍與靈活度。">
+                <img src="img/RIBA-II.jpg" alt="RIBA-II">
+                <div class="overlay">RIBA-II</div>
+            </div>
+            <div class="robo-card" data-detail="ROBEAR是最新版本，整合 AI 智慧判斷與更安全的人機互動設計。">
+                <img src="img/ROBEAR.jpg" alt="ROBEAR">
+                <div class="overlay">ROBEAR</div>
+            </div>
+        </div>
+
+        <div class="robo-details" id="robo-details">
+            請點擊上方卡片查看機器人細節。
+        </div>
+    </fieldset>
+
+    <!-- 你其他內容如意見表省略 -->
+
+    <!-- JS 互動 -->
+    <script>
+        const roboCards = document.querySelectorAll('.robo-card');
+        const roboDetails = document.getElementById('robo-details');
+
+        roboCards.forEach(card => {
+            card.addEventListener('click', () => {
+                roboDetails.textContent = card.getAttribute('data-detail');
+            });
+        });
+    </script>
+
+    <!-- 頁尾 -->
+     <style>
+	   	.footer-wrapper {
+  		  background-color: #f9f9f9;
+		  padding: 40px 20px;
+    	  border-radius: 20px;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		}
+
+		/* 標題獨立樣式 */
+		.footer-wrapper h2 {
+		  font-family: "Microsoft JhengHei", sans-serif; /* 微軟正黑體 */
+		  font-size: 20px;
+		  color: #0f4368;
+		  margin-bottom: 20px;
+		}
+
+
+		/* 內容區塊：橫向排列 */
+		.footer-container {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: flex-start;
+		  flex-wrap: wrap;
+		}
+
+		/* 各個欄位 */
+		.footer-section {
+		  flex: 1;
+		  min-width: 200px;
+		  margin: 10px;
+		}
+
+		/* 內文統一排版 */
+		.footer-section p {
+  		  margin: 0 0 10px;
+  		  line-height: 1.6;
+		}
+
+		/* 連結樣式 */
+		.footer-section a {
+  		  color: #8eb8d6;
+  		  text-decoration: none;
+		}
+		.footer-section a:hover {
+  		  text-decoration: underline;
+		}
+
+		/* 社群圖示樣式 */
+		.social-icons a {
+		  font-size: 20px;
+		  margin-right: 10px;
+		  color: #8eb8d6;
+		}
+
+
+	</style>
+    <footer>
+        <div class="footer-wrapper">
+            <h2>如有問題請聯絡我們</h2>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <p>E-mail<br />
+                        <a href="mailto:lunasxling0@gmail.com">lunasxling0@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <p>Phone<br />
+                        <a href="tel:0904857456">0904-857-456</a>
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <p>Follow Me</p>
+                    <p class="social-icons">
+                        <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 6/3 第21組. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
